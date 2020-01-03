@@ -42,7 +42,7 @@ public class MenuItemDaoCollectionImpl implements MenuItemDao {
 		Date today = new Date();
 
 		for (MenuItem x : menuItemList) {
-			if (x.isActive() && x.getDateofLaunch().before(today)) {
+			if (x.isActive() && x.getDateOfLaunch().before(today)) {
 				customerList.add(x);
 			}
 		}
@@ -58,7 +58,7 @@ public class MenuItemDaoCollectionImpl implements MenuItemDao {
 		findMenuItem.setName(menuItem.getName());
 		findMenuItem.setPrice(menuItem.getPrice());
 		findMenuItem.setActive(menuItem.isActive());
-		findMenuItem.setDateofLaunch(menuItem.getDateofLaunch());
+		findMenuItem.setDateOfLaunch(menuItem.getDateOfLaunch());
 		findMenuItem.setCategory(menuItem.getCategory());
 		findMenuItem.setFreeDelivery(menuItem.isFreeDelivery());
 	}

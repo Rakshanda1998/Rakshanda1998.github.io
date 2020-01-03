@@ -12,14 +12,14 @@ public class MenuItem {
 	private String category;
 	private boolean freeDelivery;
 
-	public MenuItem(long id, String name, float price, boolean active, Date dateofLaunch, String category,
+	public MenuItem(long id, String name, float price, boolean active, Date dateOfLaunch, String category,
 			boolean freeDelivery) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.active = active;
-		this.dateOfLaunch = dateofLaunch;
+		this.dateOfLaunch = dateOfLaunch;
 		this.category = category;
 		this.freeDelivery = freeDelivery;
 	}
@@ -60,12 +60,12 @@ public class MenuItem {
 		this.active = active;
 	}
 
-	public Date getDateofLaunch() {
+	public Date getDateOfLaunch() {
 		return dateOfLaunch;
 	}
 
-	public void setDateofLaunch(Date dateofLaunch) {
-		this.dateOfLaunch = dateofLaunch;
+	public void setDateOfLaunch(Date dateOfLaunch) {
+		this.dateOfLaunch = dateOfLaunch;
 	}
 
 	public String getCategory() {
