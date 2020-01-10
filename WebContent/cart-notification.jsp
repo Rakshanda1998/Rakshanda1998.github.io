@@ -44,7 +44,7 @@
 			<tr>
 				<td></td>
 				<th class="names">Total</th>
-				<th class="price">Rs."${total }"</th>
+				<th class="price">Rs.${total }</th>
 			</tr>
 
 

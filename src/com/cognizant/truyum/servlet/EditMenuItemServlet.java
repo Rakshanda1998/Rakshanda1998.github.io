@@ -61,7 +61,7 @@ public class EditMenuItemServlet extends HttpServlet {
 			MenuItemDao menuItemDao = new MenuItemDaoCollectionImpl();
 			menuItemDao.modifyMenuItem(menuItem);
 			request.setAttribute("msg", "Menu Items Details Saved Successfully");
-			RequestDispatcher rqd = request.getRequestDispatcher("EditMenuItem");
+			RequestDispatcher rqd = request.getRequestDispatcher("edit-menu-item-status.jsp");
 			rqd.forward(request, response);
 
 		} catch (Exception ex) {

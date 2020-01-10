@@ -21,7 +21,6 @@
 					<td>
 						<h1>Cart
 					</td>
-					</td>
 				</tr>
 
 				<tr>

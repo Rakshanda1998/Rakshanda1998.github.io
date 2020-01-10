@@ -30,7 +30,6 @@
 					<td>Price(Rs.)</td>
 					<td>Active</td>
 					<td>Date of Launch</td>
-
 					<td>Category</td>
 				</tr>
 				<tr>
