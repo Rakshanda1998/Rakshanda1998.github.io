@@ -10,11 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.cognizant.truyum.dao.CartDao;
-import com.cognizant.truyum.dao.CartDaoCollectionImpl;
-import com.cognizant.truyum.dao.MenuItemDao;
-import com.cognizant.truyum.dao.MenuItemDaoCollectionImpl;
-import com.cognizant.truyum.model.MenuItem;
+import com.cognizant.truyum.dao.CartDaoSqlImpl;
 
 /**
  * Servlet implementation class AddToCartServlet
@@ -39,7 +35,7 @@ public class AddToCartServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		try {
-			CartDao cartDao = new CartDaoCollectionImpl();
+			CartDaoSqlImpl cartDao = new CartDaoSqlImpl();
 			long menuItemId = Long.parseLong(request.getParameter("menuItemId"));
 			cartDao.addCartItems(1, menuItemId);
 			request.setAttribute("msg", "Items Added Successfully");

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cognizant.truyum.dao.CartDao;
-import com.cognizant.truyum.dao.CartDaoCollectionImpl;
+import com.cognizant.truyum.dao.CartDaoSqlImpl;
 import com.cognizant.truyum.model.MenuItem;
 
 /**
@@ -37,7 +37,7 @@ public class ShowCartServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		try {
-			CartDao cartDao = new CartDaoCollectionImpl();
+			CartDao cartDao = new CartDaoSqlImpl();
 			List<MenuItem> menuItemListCustomer = cartDao.getAllCartItems(1);
 			double total = 0;
 			for (MenuItem menuItem : menuItemListCustomer) {

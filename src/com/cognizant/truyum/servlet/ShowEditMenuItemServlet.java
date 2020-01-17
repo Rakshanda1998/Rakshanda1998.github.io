@@ -1,7 +1,6 @@
 package com.cognizant.truyum.servlet;
 
 import java.io.IOException;
-import java.text.ParseException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cognizant.truyum.dao.MenuItemDao;
-import com.cognizant.truyum.dao.MenuItemDaoCollectionImpl;
+import com.cognizant.truyum.dao.MenuItemDaoSqlImpl;
 import com.cognizant.truyum.model.MenuItem;
 
 /**
@@ -36,13 +35,14 @@ public class ShowEditMenuItemServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		try {
-			MenuItemDao menuItemDao = new MenuItemDaoCollectionImpl();
+			MenuItemDao menuItemDao = new MenuItemDaoSqlImpl();
 			int menuItemId = Integer.parseInt(request.getParameter("menuItemId"));
 			MenuItem menuItem = menuItemDao.getMenuItem(menuItemId);
 			request.setAttribute("menuItem", menuItem);
 			RequestDispatcher rqd = request.getRequestDispatcher("edit-menu-item.jsp");
 			rqd.forward(request, response);
-		} catch (ParseException ex) {
+		} catch (Exception ex) {
+			ex.printStackTrace();
 		}
 	}
 
